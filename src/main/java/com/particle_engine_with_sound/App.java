@@ -5,7 +5,7 @@
  * 
  */
 
- package com.example;
+ package com.particle_engine_with_sound;
 
  //importing the JMusic stuff
  import jm.music.data.*;
@@ -29,17 +29,20 @@
 	 static FileSystem sys = FileSystems.getDefault();
  
 	 //the getSeperator() creates the appropriate back or forward slash based on the OS in which it is running -- OS X & Windows use same code :) 
-	 static String filePath = "mid"  + sys.getSeparator() +  "MaryHadALittleLamb.mid"; // path to the midi file -- you can change this to your file
+	 static String filePath = "mid" + sys.getSeparator() + "boing1.mid"; // path to the midi file -- you can change this to your file
 																 // location/name
  
 	 public static void main(String[] args) {
-		 PApplet.main("com.example.App");		
+		 PApplet.main("com.particle_engine_with_sound");		
 	 }
  
 	 public void settings()
 	 {
 		 size(500, 500);
-		 midiSetup(filePath);
+		 filePath = "\\Java MIDI program\\" + filePath;
+		 // IF STUFF DOESN'T WORK AND U CHANGED THE FILE NAME U NEED TO CHANGE IT HERE
+		 println(System.getProperty("user.dir")+ sys.getSeparator() + filePath);
+		 midiSetup(System.getProperty("user.dir")+ sys.getSeparator() + filePath);
  
  
 		 //uncomment to debug your midi file 

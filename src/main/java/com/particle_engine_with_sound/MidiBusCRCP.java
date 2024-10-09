@@ -17,7 +17,7 @@
  * 
  */
 
-package com.example;
+package com.particle_engine_with_sound;
 
 
 import java.util.Vector;
